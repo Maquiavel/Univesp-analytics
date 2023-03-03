@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         const client = await clientPromise;
         const db = client.db("Univesp");
         let skip =  (page - 1) * 10
-        let dados = await db.collection("Dados").find({}).skip(skip).limit(10).toArray()
+        let dados = await db.collection("Dados").find({}).sort('_id',-1).skip(skip).limit(10).toArray()
         result = dados
     }else{
         result['status'] = 'error' 
