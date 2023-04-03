@@ -24,6 +24,13 @@ export default async function handler(req, res) {
         dict.umid_ar = Number(req.query.umid_ar)
         dict.time = DateTime()
         dict.type = "teste"
+        try
+        {
+            dict.local = req.query.local
+        }
+        catch(e){
+            dict.local = null
+        }
         console.log(dict)
         const client = await clientPromise;
         const db = client.db("Univesp");
