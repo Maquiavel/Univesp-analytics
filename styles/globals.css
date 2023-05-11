@@ -1,3 +1,30 @@
 body{
   background-color: white;
 }
+
+#grafo{
+  margin-left: 30%;
+  width: 40%;
+
+}
+
+#alert{
+  font-size: 130%;
+}
+
+#title{
+  text-align: center;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  #grafo{
+    margin-left: 0%;
+    width: 100%;
+  
+  }
+  #alert{
+    font-size: 100%;
+  }
+  
+}
